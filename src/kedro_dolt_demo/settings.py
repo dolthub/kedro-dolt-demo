@@ -27,11 +27,12 @@
 # limitations under the License.
 
 """Project settings."""
-from kedro_dolt_demo.hooks import ProjectHooks
+#from kedro_dolt_demo.hooks import KedroDolt
+from kedro_dolt import DoltHook
 
 DOLT_DATABASE="kedro_dolt_demo"
 # Instantiate and list your project hooks here
-HOOKS = (ProjectHooks(database=DOLT_DATABASE),)
+HOOKS = (DoltHook(database=DOLT_DATABASE),)
 
 # List the installed plugins for which to disable auto-registry
 # DISABLE_HOOKS_FOR_PLUGINS = ("kedro-viz",)
